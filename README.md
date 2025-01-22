@@ -84,25 +84,28 @@ This repository contains an AI-driven medical imaging agent built using **LangGr
 - **LangChain**: Handles integration with the DuckDuckGo search tool.
 - **Streamlit**: Provides a user-friendly interface for uploading images and displaying results.
 
-### Mermaid Diagram
+### Diagram
 Below is a flowchart explaining the interaction between different components:
 
 ```mermaid
 graph TD
     A[User Uploads Image] -->|Image Encoded to Base64| B{LangGraph Workflow}
     B -->|Image + Prompt| C[OpenAI GPT-4]
-    C -->|Response Analysis| D[LangGraph]
-    D --> E[Display Results on Streamlit]
-    B -->|Search Queries| F[DuckDuckGo Search Tool]
-    F -->|Search Results| D
+    C -->|Initial Response| D{Needs Research?}
+    D -->|Yes| E[DuckDuckGo Search Tool]
+    E -->|Search Results| F[Combine Results in LangGraph]
+    D -->|No| F
+    F -->|Final Response| G[Display Results on Streamlit]
 ```
 
 ### Annotations
-- **User Uploads Image**: The user uploads a medical image (PNG/JPG).
-- **LangGraph Workflow**: Manages the state and orchestrates calls to tools and the LLM.
-- **OpenAI GPT-4**: Processes the image and responds to the structured query.
-- **DuckDuckGo Search Tool**: Fetches relevant references and research.
-- **Streamlit**: Displays the final results, including image analysis and research links.
+- **User Uploads Image**: The user uploads a medical image (PNG/JPG), which is encoded to Base64 for processing.
+- **LangGraph Workflow**: Manages the state and orchestrates calls to OpenAI GPT-4 and the DuckDuckGo Search Tool as needed.
+- **OpenAI GPT-4**: Analyzes the image and provides an initial structured response, including observations and diagnostic insights.
+- **Decision Point (Needs Research?)**: Determines whether additional information (e.g., literature, protocols, or technological advances) is required based on the initial response.
+- **DuckDuckGo Search Tool**: If invoked, fetches relevant references and research to complement the analysis.
+- **Streamlit**: Combines the results from GPT-4 and DuckDuckGo (if applicable) and displays the final structured response, including image analysis, explanations, and research links.
+
 
 ---
 
