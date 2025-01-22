@@ -105,8 +105,6 @@ else:
 # 5) Define the Prompt/Query
 # ------------------------------------------------------------
 query = """
-You can analyze images without problem, as indicated by the company that created you: https://openai.com/index/hello-gpt-4o/
-
 You are a highly skilled university professor of radiology and medical imaging with extensive knowledge in diagnostic imaging. 
 Explain this image to your students as accurately as possible and structure your response as follows (always only text):
 
