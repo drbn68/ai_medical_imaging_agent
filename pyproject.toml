@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ai_medical_imaging"
+version = "0.1.0"
+description = "A medical imaging project"
+authors = ["David <emberizacirlus@yahoo.es>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+streamlit = "^1.41.1"
+openai = "^1.59.8"
+pillow = "^11.1.0"
+duckduckgo-search = "^7.2.1"
+langchain = "^0.3.14"
+langchain-community = "^0.3.14"
+langchain-cli = "^0.0.35"
+langchain-openai = "^0.3.0"
+langgraph = "^0.2.64"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
