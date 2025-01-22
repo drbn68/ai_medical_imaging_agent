@@ -41,8 +41,8 @@ This repository contains an AI-driven medical imaging agent built using **LangGr
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/drbn68/ai_medical_imaging.git
-   cd ai_medical_imaging
+   git clone https://github.com/drbn68/ai_medical_imaging_agent.git
+   cd ai_medical_imaging_agent
    ```
 
 2. Install dependencies using Poetry:
