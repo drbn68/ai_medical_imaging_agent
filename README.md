@@ -50,10 +50,10 @@ This repository contains an AI-driven medical imaging agent built using **LangGr
    poetry install
    ```
 
-3. Create a `.env` file in the project root with your OpenAI API key:
-   ```bash
-   OPENAI_API_KEY=your_openai_api_key
-   ```
+```markdown
+3. Configure the OpenAI API Key:
+   - When you run the application, enter your OpenAI API Key in the sidebar input field. The key is securely stored in the session state during runtime.
+
 
 4. Run the application:
    ```bash
